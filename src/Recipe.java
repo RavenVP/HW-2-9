@@ -8,13 +8,12 @@ public class Recipe {
     private final String recipeName;
     private int totalCost = 0;
     private Set<Product> products = new HashSet<Product>();
-    private int quantityOfProducts;
 
     public Recipe(String name) {
         this.recipeName = name;
     }
 
-    public void addProductInRecipe(Product product, int quantityOfProducts) {
+     public void addProductInRecipe(Product product, int quantityOfProducts) {
         if (!products.contains(product)) {
             products.add(product);
         } else {
@@ -26,7 +25,7 @@ public class Recipe {
 
 
 
-    public boolean equals(Object o) {
+     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Recipe recipes = (Recipe) o;
@@ -34,14 +33,13 @@ public class Recipe {
     }
 
     @Override
-    public int hashCode() {
+     public int hashCode() {
         return Objects.hash(recipeName);
     }
 
     public String getRecipeName() {return recipeName;}
     public int getTotalCost() {return totalCost;}
     public Set<Product> getProducts() {return products;}
-    public int getQuantityOfProducts() {return quantityOfProducts;}
 
     @Override
     public String toString() {
@@ -49,7 +47,7 @@ public class Recipe {
                 "recipeName='" + recipeName + '\'' +
                 ", totalCost=" + totalCost +
                 ", products=" + products +
-                ", quantityOfProducts=" + quantityOfProducts +
+                ", quantityOfProducts=" +
                 '}';
     }
 }
