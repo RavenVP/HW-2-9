@@ -30,7 +30,7 @@ public class Recipe {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Recipe recipes = (Recipe) o;
-        return totalCost == recipes.totalCost && quantityOfProducts == recipes.quantityOfProducts && Objects.equals(recipeName, recipes.recipeName) && Objects.equals(products, recipes.products);
+        return Objects.equals(recipeName, recipes.recipeName);
     }
 
     @Override
